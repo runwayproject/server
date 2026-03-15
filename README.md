@@ -1,2 +1,2 @@
-# Runway Server
-Minimal Rust relay server for Runway protocol.
+# Airport
+Airport is a relay server for the Runway protocol.

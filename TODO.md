@@ -1,0 +1,1 @@
+- add the ability to disable offline blob delivery

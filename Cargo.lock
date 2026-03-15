@@ -3,6 +3,19 @@
 version = 4
 
 [[package]]
+name = "airport"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "ed25519-dalek",
+ "rand",
+ "rusqlite",
+ "serde",
+ "serde_cbor",
+ "sha2",
+]
+
+[[package]]
 name = "anyhow"
 version = "1.0.102"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -442,19 +455,6 @@ checksum = "a8a1f2315036ef6b1fbacd1972e8ee7688030b0a2121edfc2a6550febd41574d"
 dependencies = [
  "hashbrown 0.16.1",
  "thiserror",
-]
-
-[[package]]
-name = "runway-server"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "ed25519-dalek",
- "rand",
- "rusqlite",
- "serde",
- "serde_cbor",
- "sha2",
 ]
 
 [[package]]

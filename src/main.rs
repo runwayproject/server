@@ -1,5 +1,5 @@
 use anyhow::Result;
-use runway_server::server::{run_tcp_server, ServerConfig};
+use airport::server::{run_tcp_server, ServerConfig};
 
 fn main() -> Result<()> {
     let mut config = ServerConfig::default();
