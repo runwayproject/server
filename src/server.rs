@@ -26,7 +26,7 @@ pub struct ServerConfig {
 impl Default for ServerConfig {
     fn default() -> Self {
         Self {
-            bind_addr: "127.0.0.1:8999".to_string(),
+            bind_addr: "127.0.0.1:32767".to_string(),
             max_frame_bytes: 2 * 1024 * 1024,
             max_blob_bytes: 1024 * 1024,
             max_queue_per_rid: 512,
