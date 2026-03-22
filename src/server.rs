@@ -6,13 +6,15 @@ use anyhow::{bail, Context, Result};
 use ed25519_dalek::{Signature, Verifier, VerifyingKey};
 use rand::RngExt;
 use rusqlite::{params, Connection};
+use serde::Deserialize;
 use std::net::{TcpListener, TcpStream};
 use std::path::Path;
 use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::{SystemTime, UNIX_EPOCH};
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize)]
+#[serde(default)]
 pub struct ServerConfig {
     pub bind_addr: String,
     pub max_frame_bytes: usize,
@@ -31,7 +33,7 @@ impl Default for ServerConfig {
             max_blob_bytes: 1024 * 1024,
             max_queue_per_rid: 512,
             db_path: "relay.db".to_string(),
-            rid_ttl_ms: 24 * 60 * 60 * 1000,
+            rid_ttl_ms: 24 * 60 * 60 * 1000, // 86 400 000 ms (24h)
             max_auth_skew_ms: 5 * 60 * 1000,
         }
     }

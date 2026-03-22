@@ -1,0 +1,15 @@
+# example config for airport server 
+# copy this to server.toml 
+
+# pretty self explanatory
+bind_addr = "127.0.0.1:32767"
+db_path = "relay.db"
+
+# Limits
+max_frame_bytes = 2097152
+max_blob_bytes = 1048576
+max_queue_per_rid = 512
+
+# times
+rid_ttl_ms = 86400000
+max_auth_skew_ms = 300000
