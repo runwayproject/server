@@ -11,5 +11,5 @@ max_blob_bytes = 1048576
 max_queue_per_rid = 512
 
 # times
-rid_ttl_ms = 86400000
+rid_ttl_ms = 86400000 # rid expire time, default 24h
 max_auth_skew_ms = 300000

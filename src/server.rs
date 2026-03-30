@@ -1,4 +1,4 @@
-use crate::transport::{
+use librunway::transport::{
     auth_signing_payload, credential_fingerprint, decode_packet, encode_packet, read_framed,
     write_framed, ClientPacket, EncryptedBlob, RequestAuth, ServerPacket,
 };
